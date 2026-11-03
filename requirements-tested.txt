@@ -1,0 +1,3 @@
+# Offline regression environment: Python 3.12.7
+av==18.1.0
+Pillow==12.3.0

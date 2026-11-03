@@ -1,0 +1,12 @@
+{
+  "python": [
+    "av",
+    "Pillow"
+  ],
+  "media_tools": [
+    "ffmpeg",
+    "ffprobe"
+  ],
+  "cloud_adapter": "RunningHub AI applications, public schema must be checked per run",
+  "credential_bundled": false
+}

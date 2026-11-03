@@ -1,0 +1,5 @@
+# Keep exact bytes: frame tables, source contracts and publication manifests use SHA256.
+* -text
+*.mp4 binary
+*.m4a binary
+*.png binary

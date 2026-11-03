@@ -1,0 +1,2 @@
+#!/bin/sh
+exec "${TROUBLEMAKER_PYTHON:-python}" -B tools/verify_publish.py --pre-push "$@"

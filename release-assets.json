@@ -1,0 +1,425 @@
+{
+  "distribution": "Media stays together with the full licensed skill Release ZIP, not individual Git files",
+  "files": {
+    "assets/template/原片音轨.m4a": {
+      "sha256": "2b5bf85ef3c79b988cc6eb2c6a9355ae61b904b3aa942eb0490ffb565c9acbc2",
+      "size_bytes": 3442980
+    },
+    "assets/template/替换用参考图/一号.png": {
+      "sha256": "8c4fe52880a6d056775acd885273aa50ce25bcb0cf5ad8ac9d1dba0ddd19c0c7",
+      "size_bytes": 6110693
+    },
+    "assets/template/替换用参考图/二号.png": {
+      "sha256": "1c4834dfcd87a42ba4d6d50e5485ad06951389187b8c13edd0d105dc2c4f2385",
+      "size_bytes": 7751134
+    },
+    "assets/template/补齐生成用/001 39.mp4": {
+      "sha256": "7c669f01a89c36939e8bc4021a04c6c2c645076d46178203f5c6a682e4a0d6ef",
+      "size_bytes": 2403599
+    },
+    "assets/template/补齐生成用/002 56.mp4": {
+      "sha256": "b69eb9a5e05f767081fe485e840495d7d33599d454d4eaa8b277e38b7709e9e7",
+      "size_bytes": 3156520
+    },
+    "assets/template/补齐生成用/003 56.mp4": {
+      "sha256": "3013f514cf4fb5b2f9af68267b4f80a7e90332e18c6ce99c1947a03ab4e567cc",
+      "size_bytes": 2384016
+    },
+    "assets/template/补齐生成用/004 73.mp4": {
+      "sha256": "f58a2f3a6d8a9384ca9df55e667ac041eb2c5643a49e64ec2a9cc970a7f1ebec",
+      "size_bytes": 1528294
+    },
+    "assets/template/补齐生成用/005 90.mp4": {
+      "sha256": "8fa1e866e86d4f0c79fdbf55397ff7ca91a7c78555bc01500e6c58eb41d9748f",
+      "size_bytes": 2762306
+    },
+    "assets/template/补齐生成用/006 56.mp4": {
+      "sha256": "9255649b0d73dcef3b1c1236e3decda1eec63d7f8023a4c0a58b8a62640ab9e7",
+      "size_bytes": 2363386
+    },
+    "assets/template/补齐生成用/007 56.mp4": {
+      "sha256": "3d6cf255e7389a1b95bd6fd4f355fb02c249a545aa63c4f8e18a2a4a938aec3d",
+      "size_bytes": 2842751
+    },
+    "assets/template/补齐生成用/008 73.mp4": {
+      "sha256": "d5babdf9a950dbfe82e8bd1e4381005bba116a58dceacb8a07dceae9e540c5d9",
+      "size_bytes": 2554489
+    },
+    "assets/template/补齐生成用/009 90.mp4": {
+      "sha256": "a20c2a5c580d281fe25ce489781197db39311444f293b07f33fd09d58139aaf4",
+      "size_bytes": 4458154
+    },
+    "assets/template/补齐生成用/010 39.mp4": {
+      "sha256": "fcee3f573034153b21dea26ac633e36e33eb04cbba26dffd62c4f5e1760dfcf7",
+      "size_bytes": 1302682
+    },
+    "assets/template/补齐生成用/011 39.mp4": {
+      "sha256": "d4fdfe760a92261703e904b85a0da9cce275644ff18afc9750e846587cc9cce7",
+      "size_bytes": 1560737
+    },
+    "assets/template/补齐生成用/012 56.mp4": {
+      "sha256": "c9421265e729727db38ece73d54ee6ecc4f2fb93a290da2e54d60a5f44cf97e8",
+      "size_bytes": 2222978
+    },
+    "assets/template/补齐生成用/013 124.mp4": {
+      "sha256": "de5f82f64abf6f1bf5d180153b5dfbf61183d2eaca22b9bece18da049201769f",
+      "size_bytes": 5660938
+    },
+    "assets/template/补齐生成用/014 73.mp4": {
+      "sha256": "5a61d420382b916aed9373ed9926f2bfc23f12680083500b10e835da67fb18bc",
+      "size_bytes": 3667134
+    },
+    "assets/template/补齐生成用/015 39.mp4": {
+      "sha256": "cd63e4464d167330254ed89d817a739956c531750011962c3594166c4ef09843",
+      "size_bytes": 1218159
+    },
+    "assets/template/补齐生成用/016 22.mp4": {
+      "sha256": "e83cd52f7cd22b0944cebb219a6708a534b03174b69ab22e2242fc9d4b15e79e",
+      "size_bytes": 580407
+    },
+    "assets/template/补齐生成用/017 22.mp4": {
+      "sha256": "ad717c0e7648213c7326c67f22801c353f2277ae914298d9807895d01395529c",
+      "size_bytes": 630954
+    },
+    "assets/template/补齐生成用/018 56.mp4": {
+      "sha256": "256aed65736e4be632d118e9c76b7034bb78658ee605571510a91a3a154ca49c",
+      "size_bytes": 3061579
+    },
+    "assets/template/补齐生成用/019 22.mp4": {
+      "sha256": "c97df41a5ad28bef6563b6dc9a17f6e92a25285674b4aa25d1fbec7bdbbb0e06",
+      "size_bytes": 1042403
+    },
+    "assets/template/补齐生成用/020 39.mp4": {
+      "sha256": "0c38f7417e04fc3d8528adc2f08f56c1e459376637d82e523c8292aa98c50cbd",
+      "size_bytes": 2284260
+    },
+    "assets/template/补齐生成用/021 22.mp4": {
+      "sha256": "062659ef3490504d41020730019359703bc0980ff15fd6dda5f337e20e8fe76a",
+      "size_bytes": 1219129
+    },
+    "assets/template/补齐生成用/022 39.mp4": {
+      "sha256": "476c7f253035419565af6aadc99bf5b49f2f2d9b7d8a5c28339eb9520c90154c",
+      "size_bytes": 1761679
+    },
+    "assets/template/补齐生成用/023 56.mp4": {
+      "sha256": "42c7633313647d2b8532875f7fc9b525d1ef1d0baca4899d8a1ca93280b8768a",
+      "size_bytes": 2900893
+    },
+    "assets/template/补齐生成用/024 56.mp4": {
+      "sha256": "1105171379211d1de8bbb7b35beffc94ee45cf2c33ed550944d87b5766820589",
+      "size_bytes": 2525874
+    },
+    "assets/template/补齐生成用/025 39.mp4": {
+      "sha256": "fa28cd8854948f63159652c3ab67058305dad073a87758585d4b9011a63f651d",
+      "size_bytes": 2808315
+    },
+    "assets/template/补齐生成用/026 73.mp4": {
+      "sha256": "4d564fbca13476f9191825eeb2d71b6c43b783d00241119ae20a8a42f95eef63",
+      "size_bytes": 4146260
+    },
+    "assets/template/补齐生成用/027 107.mp4": {
+      "sha256": "1b1a7decd49b014575b57dc12ceea7dde63cae8fe5dadf2c6a4fb3b78f52ddb7",
+      "size_bytes": 6682519
+    },
+    "assets/template/补齐生成用/028 48.mp4": {
+      "sha256": "7f890e4589e997e7399d48526fc800667c20e026507537b86a6696043ab03a87",
+      "size_bytes": 2164837
+    },
+    "assets/template/补齐生成用/029 107.mp4": {
+      "sha256": "3457bd02ac6ef83d88afd23dbd34ba4ef16a35744a3c00288cbc09b178e56038",
+      "size_bytes": 5235789
+    },
+    "assets/template/补齐生成用/030 73.mp4": {
+      "sha256": "354e3d076210939abaf9443163355855eabeb02a7ca71863e6dbd01e0f6bfdc5",
+      "size_bytes": 4115204
+    },
+    "assets/template/补齐生成用/031 22.mp4": {
+      "sha256": "017cdfba39e4a4ed4699814281c66fb27b9c0d8168525ce865d635555bc508a0",
+      "size_bytes": 672177
+    },
+    "assets/template/补齐生成用/032 39.mp4": {
+      "sha256": "90644c115441acf633f296b7a0aa24ebd3fa972f3c3aa793ab8cbeb71e0a5c74",
+      "size_bytes": 1957805
+    },
+    "assets/template/补齐生成用/033 39.mp4": {
+      "sha256": "e5b1214e4eb29c75731acd53b1fae1ca1c08fe32d624b369c3108cdcdef6f656",
+      "size_bytes": 1446866
+    },
+    "assets/template/补齐生成用/034 90.mp4": {
+      "sha256": "1cf5c902cab7c0024236b670995f10389c82c31450c87f839492bf1aa8e2dd30",
+      "size_bytes": 4079975
+    },
+    "assets/template/补齐生成用/035 56.mp4": {
+      "sha256": "8456cfaa4477a119859041b4d4bc7a0060679dc00813be15e1940483103c4993",
+      "size_bytes": 3173414
+    },
+    "assets/template/补齐生成用/036 39.mp4": {
+      "sha256": "6a1ce9c6a7bb8603f303c01ca8c0a7956c2dacc1f3df808a4f1a3309666b0cc6",
+      "size_bytes": 1194314
+    },
+    "assets/template/补齐生成用/037 56.mp4": {
+      "sha256": "98f82f7f616c5d1423c357919791643e3201a7770db73c946ce90c9fa1c202c4",
+      "size_bytes": 2916982
+    },
+    "assets/template/补齐生成用/038 22.mp4": {
+      "sha256": "694e955b2f8e29c7b3ce8123b4201b390758821cb29be6f6c3d99f7263ed5a8f",
+      "size_bytes": 896441
+    },
+    "assets/template/补齐生成用/039 39.mp4": {
+      "sha256": "3c0e3a36751a36b0434ae28ffa9b74897da319fff4b360655900669bc575b47d",
+      "size_bytes": 1300221
+    },
+    "assets/template/补齐生成用/040 56.mp4": {
+      "sha256": "48179f5d5c33d9974e99ca2f0793fe7dba7482324596a9ebfe106a541bbb132a",
+      "size_bytes": 3881779
+    },
+    "assets/template/补齐生成用/041 73.mp4": {
+      "sha256": "ee8f7c12bbee3be640360ba85d54330676dfbe73ee9bb1b1f4003f82279aae1f",
+      "size_bytes": 3794117
+    },
+    "assets/template/补齐生成用/042 22.mp4": {
+      "sha256": "40798d2b77fe396931a7ab1341535425cbbbc6b4abe3c2443ac99008024d9ebc",
+      "size_bytes": 580302
+    },
+    "assets/template/补齐生成用/043 90.mp4": {
+      "sha256": "a05e999adefb898eabaea9ed729fd8ee6eb3ed0acfcc2e58ca097044f6093dd1",
+      "size_bytes": 5033457
+    },
+    "assets/template/补齐生成用/044 90.mp4": {
+      "sha256": "97c9077091c65093a5bb46eb64b58f1a74a4881709abab352d2a8906e9628150",
+      "size_bytes": 4566332
+    },
+    "assets/template/补齐生成用/045 56.mp4": {
+      "sha256": "8cc60d4c6f2d2d0318e480bfde18b970c561ce6ecfad5e2140f64b358a50b35c",
+      "size_bytes": 2261907
+    },
+    "assets/template/补齐生成用/046 73.mp4": {
+      "sha256": "d704cd1638c370fba016427b1207087e237b56b9c9306913cef17ab2d9b7de84",
+      "size_bytes": 5202351
+    },
+    "assets/template/补齐生成用/047 22.mp4": {
+      "sha256": "15e28e7e545d4c169a068a0bfa676e59dbc7b476ca0ac625d4b278078cc921bc",
+      "size_bytes": 988533
+    },
+    "assets/template/补齐生成用/048 22.mp4": {
+      "sha256": "63cf3a9418af49bc005bbce60814349ab188a15691a61da3f771a31a11f5e640",
+      "size_bytes": 1302639
+    },
+    "assets/template/补齐生成用/049 39.mp4": {
+      "sha256": "92e195e699181aa7337463f54669b99941e4781588a2ea3d20f1b895357b1c2d",
+      "size_bytes": 3856677
+    },
+    "assets/template/补齐生成用/050 90.mp4": {
+      "sha256": "0ca295040afea46107365ec70d4837d592471eaa3e599bd9b4034a266d6a82ad",
+      "size_bytes": 5269472
+    },
+    "assets/template/补齐生成用/051 56.mp4": {
+      "sha256": "7469bef85f2bc9991495130589623adda7957594fad58504d8e034b1611f4d62",
+      "size_bytes": 2843853
+    },
+    "assets/template/补齐生成用/052 22.mp4": {
+      "sha256": "9b8739d963063d249c29b534ee2880eaf0e6669dc28faff74045f95bc7a1700e",
+      "size_bytes": 2629270
+    },
+    "assets/template/补齐生成用/053 22.mp4": {
+      "sha256": "7d41c2e559094bc672d8fd3900df9b61611b6c162ba23d7e80479b8e3f35851e",
+      "size_bytes": 813863
+    },
+    "assets/template/补齐生成用/054 39.mp4": {
+      "sha256": "344438f0dcab2cf527c38a79ba590a9ca7dfcdc3d10f6ac0f590e6130919abf2",
+      "size_bytes": 2375988
+    },
+    "assets/template/补齐生成用/055 73.mp4": {
+      "sha256": "75c1b1905f0a5609dd62647d8035d16cce142c4fca0da3f9b040efe34598316a",
+      "size_bytes": 7637396
+    },
+    "assets/template/补齐生成用/056 39.mp4": {
+      "sha256": "c8c968b010d29255da9612c51740526acee783184d89551861a0f708e37e8c63",
+      "size_bytes": 2904766
+    },
+    "assets/template/补齐生成用/057 39.mp4": {
+      "sha256": "18c4f2c17e1ac7d8e4e376d7f44f2335efe819dfc850ccbf0eec3387bfdb6271",
+      "size_bytes": 2711818
+    },
+    "assets/template/补齐生成用/058 39.mp4": {
+      "sha256": "8c05d73c2033c7629be709de81b8bda21f812da6a7ded1d6b101a674f1831140",
+      "size_bytes": 2836947
+    },
+    "assets/template/补齐生成用/059 39.mp4": {
+      "sha256": "67ddc8892c05260d396abc66d83b434ef950060129a158a2bc88104265157b9a",
+      "size_bytes": 5397811
+    },
+    "assets/template/补齐生成用/060 56.mp4": {
+      "sha256": "0a67d4fb06089b06b2a7c1bd4cd316f4ebe4c9b9f79af7b709aef622613266d8",
+      "size_bytes": 4386530
+    },
+    "assets/template/补齐生成用/061 39.mp4": {
+      "sha256": "83b800ca4f521b746a060ef0dba7f6ab9e3d2af8f47897da9a09bb45713087c8",
+      "size_bytes": 2873393
+    },
+    "assets/template/补齐生成用/062 39.mp4": {
+      "sha256": "def3ab9de4490de6e6540d28cc4678af82647f125a59ce0bcc23c0aaf1c355bd",
+      "size_bytes": 2255518
+    },
+    "assets/template/补齐生成用/063 39.mp4": {
+      "sha256": "e80e702bb4f22dd045a80de9953190b3c65b3abb86d299a7799eaad7d18f2693",
+      "size_bytes": 2440620
+    },
+    "assets/template/补齐生成用/064 39.mp4": {
+      "sha256": "7ed6f171a9935dfa499bb61be397812bd85fb3a377c0a66c01e39c78bd8612c0",
+      "size_bytes": 2058540
+    },
+    "assets/template/补齐生成用/065 39.mp4": {
+      "sha256": "729ad4675c2b95600b257257947d8bd70e943ad91914df6a3fa293276ae19784",
+      "size_bytes": 3362607
+    },
+    "assets/template/补齐生成用/066 56.mp4": {
+      "sha256": "59d95969368837662a2631c193f38c32a102651b7269f774c6e2e25552aff17c",
+      "size_bytes": 7948693
+    },
+    "assets/template/补齐生成用/067 124.mp4": {
+      "sha256": "4a1abeda48d66afc62d8061be5eb06418c2d2941348187d1bf37256a2141adb4",
+      "size_bytes": 17736644
+    },
+    "assets/template/补齐生成用/068 141.mp4": {
+      "sha256": "bd1ba12600e49740b031a0957b43548827734d8df51c88868b8ada1720e674e6",
+      "size_bytes": 17166106
+    },
+    "assets/template/补齐生成用/069 90.mp4": {
+      "sha256": "4f54180b5715d354caa9764c181efe7ab5ae2c788b1a0d111093c48ab3b958c3",
+      "size_bytes": 4162117
+    },
+    "assets/template/补齐生成用/070 56.mp4": {
+      "sha256": "cb78311ab2a5aa95af8b3eaf861997135cfdc69b0aed13cf3c3a017e56919ac8",
+      "size_bytes": 1787999
+    },
+    "assets/template/补齐生成用/071 22.mp4": {
+      "sha256": "53d2ee246492f2920263298b2885139eb9669e34b804db7bdf09e88d72627b82",
+      "size_bytes": 835566
+    },
+    "assets/template/补齐生成用/072 39.mp4": {
+      "sha256": "cdfbde9b587890fdb1b5f7c277662c5d488c80354efcddf7ab68dca26dedb5e0",
+      "size_bytes": 1427934
+    },
+    "assets/template/补齐生成用/073 141.mp4": {
+      "sha256": "96273a5dbb1dafe4cfa4a468e3e758bfb34cc05d8684ec9482e0da2c98da7756",
+      "size_bytes": 13179434
+    },
+    "assets/template/补齐生成用/074 22.mp4": {
+      "sha256": "5631cbc966d4146cc889ee266e16f5b1baedc01a0a9876c76d105ea1d452bc21",
+      "size_bytes": 946075
+    },
+    "assets/template/补齐生成用/075 39.mp4": {
+      "sha256": "f3ae7c1eae889eee92f4c84fe4cab41b9ee78a0e5a48650f401f6fb9c069b428",
+      "size_bytes": 5526670
+    },
+    "assets/template/补齐生成用/076 39.mp4": {
+      "sha256": "2e678444062825fb95d50c9f2044f6b4bec7434f6ca64ccdf224be56d28b84df",
+      "size_bytes": 1433690
+    },
+    "assets/template/补齐生成用/077 22.mp4": {
+      "sha256": "f4318b1db0cef128467e0424a79a804acf1fe09bd48c0c8a8532d8e3087639d3",
+      "size_bytes": 3142881
+    },
+    "assets/template/补齐生成用/078 39.mp4": {
+      "sha256": "7160305b7fe40e5fbf51ada060c12a405c04e0e862bfdb69ffe46d388bdb9596",
+      "size_bytes": 2769197
+    },
+    "assets/template/补齐生成用/079 22.mp4": {
+      "sha256": "aa0a44a3c5897c92ff31dcbfcdb663c4d36b4c51bd8ed0c22bc76995bf47e3b3",
+      "size_bytes": 2388664
+    },
+    "assets/template/补齐生成用/080 39.mp4": {
+      "sha256": "e8a38e6ab806e3792db78279f0cc3ec478699208e34ac14a22857fc2af23f901",
+      "size_bytes": 2666620
+    },
+    "assets/template/补齐生成用/081 56.mp4": {
+      "sha256": "b0a938cc3d8234074bb78fe460c6a4028c219f6ece63a74c35f63eee31693ddb",
+      "size_bytes": 4349447
+    },
+    "assets/template/补齐生成用/082 56.mp4": {
+      "sha256": "58847b2d8e7579a10aa4d57c3154b74753af4b30c0affe0a8321150563ba2153",
+      "size_bytes": 3552582
+    },
+    "assets/template/补齐生成用/083 56.mp4": {
+      "sha256": "8ad293510a65d0862f583e50a64202041848c3d8772a48aead1ae483ac0a8bd0",
+      "size_bytes": 4658580
+    },
+    "assets/template/补齐生成用/084 22.mp4": {
+      "sha256": "85ff1b6dbcdf991812946ce7a554eb827b4d66f47ec525c6cbc8caeec9848cd9",
+      "size_bytes": 1075297
+    },
+    "assets/template/补齐生成用/085 56.mp4": {
+      "sha256": "a44b65791663582591bec67b63fb3fa21534e42aaf5fc30eaf694a64024f0c4d",
+      "size_bytes": 3144312
+    },
+    "assets/template/补齐生成用/086 39.mp4": {
+      "sha256": "8428dd997cba6f03b6d4990ab586e353b8a23c3b9b01ab5a9aae80eba4653b28",
+      "size_bytes": 3381529
+    },
+    "assets/template/补齐生成用/087 23.mp4": {
+      "sha256": "cd08a90ab778ee758a8c22b9a9aaa458c3ead4d5100a0c4fa56c2766963ecab1",
+      "size_bytes": 834314
+    },
+    "assets/template/补齐生成用/088 90.mp4": {
+      "sha256": "15d934123fd31aa69752c068f863e2a37bbeb02978748a98b7e5c4311a35ae9c",
+      "size_bytes": 4281795
+    },
+    "assets/template/补齐生成用/089 56.mp4": {
+      "sha256": "7d0cb3a6a27b22372a85ca4f65a5f1b951b0657f2ce9c4f5f9fa27b59d18a4b5",
+      "size_bytes": 2420747
+    },
+    "assets/template/补齐生成用/090 39.mp4": {
+      "sha256": "a97637f8018a2f4503cf1d93dd859fe2df5ba2e7e927cab4a13b4120d25d784f",
+      "size_bytes": 2134277
+    },
+    "assets/template/补齐生成用/091 73.mp4": {
+      "sha256": "e85484607d21f1f9da9460bc82acd6271798bf7860bbc3a8bbfdc53279839a48",
+      "size_bytes": 3744192
+    },
+    "assets/template/补齐生成用/092 39.mp4": {
+      "sha256": "45d7a68c0d98496df7bd37ad403509d0b97e104a76ce7b11a5c36166ac0bf407",
+      "size_bytes": 1567570
+    },
+    "assets/template/补齐生成用/093 39.mp4": {
+      "sha256": "093bef4dfead0050e3adf17bf06061ca0c83ab25e72999762aa88d17a1c7e65e",
+      "size_bytes": 1830768
+    },
+    "assets/template/补齐生成用/094 56.mp4": {
+      "sha256": "5aead845b15868a90c41012978a50dab344ab9b0812360e2fa05f3e8d4a71983",
+      "size_bytes": 3472154
+    },
+    "assets/template/补齐生成用/095 56.mp4": {
+      "sha256": "2010f0c5e509b83a98c46eb4272f6da37c1ac48903ac6335a9bbfe6fdbb822ce",
+      "size_bytes": 3591096
+    },
+    "assets/template/补齐生成用/096 56.mp4": {
+      "sha256": "c2a7f55f0c4ba029ba816e77e70358a675732216f209a7fee40e8a0cfa14d71d",
+      "size_bytes": 2939772
+    },
+    "assets/template/补齐生成用/097 56.mp4": {
+      "sha256": "fa6d86bc523c2c6e42280187ebb22b8d0adae7ecd08f2da468d617ce576b35ab",
+      "size_bytes": 3289267
+    },
+    "assets/template/补齐生成用/098 56.mp4": {
+      "sha256": "ab418ba6fa99495bf6112c728ea950c92c3d989049845f4744f8fee0ff95f2d3",
+      "size_bytes": 2909747
+    },
+    "assets/template/补齐生成用/099 39.mp4": {
+      "sha256": "ad6c7138ed3d3617f60fb604230117be9bc65d629496db8a668fc0eef9244c6b",
+      "size_bytes": 2619700
+    },
+    "assets/template/补齐生成用/100 39.mp4": {
+      "sha256": "f8f120cb75cef1946ed458faf3370444cf0666308d802b3577989d7585e5ac99",
+      "size_bytes": 1611005
+    },
+    "assets/template/补齐生成用/101 141.mp4": {
+      "sha256": "7e20465b8117fbf2e1715a75b7e67932bdf57064594e4816af1d54320c392a18",
+      "size_bytes": 7327379
+    },
+    "assets/template/补齐生成用/102 141.mp4": {
+      "sha256": "302757c75924798c741b613b64235ac2d5ef7c051494296c3534545765aabfd7",
+      "size_bytes": 6958474
+    }
+  }
+}

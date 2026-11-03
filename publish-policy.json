@@ -1,0 +1,15 @@
+{
+  "skill": "troublemaker-character-replacement",
+  "repository": "https://github.com/T8mars/Trouble-Maker-Replacement-Skill",
+  "git_scope": "Sanitized skill source, documentation, tests and publication tools; only this skill",
+  "release_scope": "Complete licensed skill bundle with original template media verified by SHA256",
+  "forbidden": [
+    "ROADMAP.MD at every depth and letter case",
+    "API keys and credentials, including empty credential files",
+    "private runtime/task/ledger data and signed URLs",
+    "personal reference images, candidates and completed videos",
+    "other skills, executable binaries and bytecode caches"
+  ],
+  "preserve": ["Original author attribution and LICENSE.txt", "Source media hashes and relative paths"],
+  "future_updates": "Publish only troublemaker-character-replacement to this repository. Never reuse APT or factory remotes."
+}

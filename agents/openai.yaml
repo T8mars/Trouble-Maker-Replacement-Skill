@@ -1,0 +1,4 @@
+interface:
+  display_name: "TroubleMaker全自动人物替换复刻"
+  short_description: "使用两张人物参考图自动复刻TroubleMaker舞台MV，支持换角、角色对调和原音轨组装"
+  default_prompt: "使用 $troublemaker-character-replacement，按我提供的两张人物参考图复刻TroubleMaker视频。"

@@ -1,0 +1,34 @@
+{
+  "name": "troublemaker-character-replacement",
+  "display_name": "TroubleMaker全自动人物替换复刻",
+  "version": "1.1.0",
+  "original_author": "wuwukasi",
+  "original_author_url": "https://space.bilibili.com/670281046",
+  "packaged_for": "T8star",
+  "status": "upgraded-offline-verified",
+  "source_segments": 102,
+  "generated_segments": 101,
+  "passthrough": [
+    "028"
+  ],
+  "original_frames": 4779,
+  "padded_frames": 5569,
+  "fps": "24/1",
+  "default_concurrency": 3,
+  "api_key_bundled": false,
+  "source_notes": "Original source media and license retained by SHA256; credential placeholder, local executables and personal run records excluded.",
+  "source_dimensions": [
+    1920,
+    1078
+  ],
+  "audio_seconds": 199.082902,
+  "updated": "2026-11-04",
+  "runtime_overlay": "assets/runtime",
+  "source_contract": "references/source-contract.json",
+  "discussion_rounds": 20,
+  "verification_scope": "41 offline regressions and isolated real-template initialization; no new paid cloud run; new references remain unapproved.",
+  "repository": "https://github.com/T8mars/Trouble-Maker-Replacement-Skill",
+  "distribution": "complete-skill-release",
+  "source_origin": "wuwukasi original TroubleMaker package",
+  "supported_host": "Windows production runner; Python 3.12 tested; FFmpeg required separately"
+}
