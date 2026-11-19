@@ -1,10 +1,26 @@
 # TroubleMaker 人物替换技能 / Character Replacement Skill
 
+## 调用入口与优惠
+
+| 平台 | 入口 | 优惠 |
+| --- | --- | --- |
+| 贞贞 AI | [贞贞 AI 调用](https://www.zzai.app) | 免费 GPT Image 2.6 |
+| RunningHub | [国内站](https://www.runninghub.cn?inviteCode=kol01-rh099) · [国际站](https://www.runninghub.ai?inviteCode=rh-v1121) | 每日 3 次免费 H3 及优惠券 |
+| 晨羽 | [晨羽调用](https://www.chenyu.cn/console/login?invitationCode=NGT5S4) | T8 专属优惠券，见下表 |
+
+| 晨羽优惠 | 数量或领取条件 | 券码 |
+| --- | --- | --- |
+| 0.1 = 5 | 300 张 | `W6TGFF` |
+| 30 = 45 | 300 张 | `T8AIGC` |
+| 50 = 100 | 每位粉丝均可领取，每个账号限领一次 | `50VS50` |
+
+更多镜像陆续更新，可搜索 **t8star**。
+
 **基于 RunningHub（RH）AI 应用，需要 RH 账号、你自己的 API Key 和足够的 RH 币。** 生成任务会产生平台费用；本仓库不提供 API Key。
 
 **Powered by RunningHub AI applications.** An RH account, your own API key and sufficient credits are required. Generation is billed by RunningHub; no credentials are included.
 
-注册 / Sign up：[海外站 International](https://www.runninghub.ai/?inviteCode=rh-v1121) · [国内站 Mainland China](https://www.runninghub.cn/?inviteCode=rh-v1121)。当前内置运行器使用海外 `runninghub.ai` 接口；国内站链接仅为注册入口，不代表已验证国内接口兼容性。The bundled adapter targets `runninghub.ai`; the mainland link is a registration option, not a claim of verified endpoint compatibility.
+注册 / Sign up：[海外站 International](https://www.runninghub.ai/?inviteCode=rh-v1121) · [国内站 Mainland China](https://www.runninghub.cn?inviteCode=kol01-rh099)。当前内置运行器使用海外 `runninghub.ai` 接口；国内站链接仅为注册入口，不代表已验证国内接口兼容性。The bundled adapter targets `runninghub.ai`; the mainland link is a registration option, not a claim of verified endpoint compatibility.
 
 **原作者 / Original author：[wuwukasi](https://space.bilibili.com/670281046)**  
 **优化作者 / Optimized by：[T8star](https://space.bilibili.com/385085361)**
@@ -92,6 +108,22 @@ Agent 会建立独立制作目录、识别当前人物、完成试片，再批�
 **API Key 或成片会上传到这个仓库吗？** 不会。公开范围只包括本技能与完整许可包内的原始素材；私人凭证、任务账本、个人参考图、候选、成片和任何大小写的 ROADMAP.md 都在发布排除范围内。
 
 ## English guide
+
+### Service links and offers
+
+| Service | Access | Offer |
+| --- | --- | --- |
+| Zhenzhen AI | [Open Zhenzhen AI](https://www.zzai.app) | Free GPT Image 2.6 |
+| RunningHub | [Mainland China](https://www.runninghub.cn?inviteCode=kol01-rh099) · [International](https://www.runninghub.ai?inviteCode=rh-v1121) | Three free H3 runs per day, plus coupons |
+| Chenyu | [Open Chenyu](https://www.chenyu.cn/console/login?invitationCode=NGT5S4) | T8-exclusive coupons listed below |
+
+| Chenyu offer | Availability | Coupon code |
+| --- | --- | --- |
+| 0.1 = 5 | 300 coupons | `W6TGFF` |
+| 30 = 45 | 300 coupons | `T8AIGC` |
+| 50 = 100 | Available to every fan, once per account | `50VS50` |
+
+Search for **t8star** to find new mirror sites as they are added.
 
 ### What this skill does
 
