@@ -5,13 +5,16 @@ import av
 from fractions import Fraction
 from PIL import Image,ImageDraw
 import rh_core as rh
+import channels
 from strict_video_frames import strict_frames
 
 P=Path(__file__).resolve().parent
 
 def inspect(wid,native_all=False,rois=None):
  cfg=json.loads((P/'runtime.json').read_text(encoding='utf-8'))
- db=sqlite3.connect(Path(cfg['ledger_file']).as_uri()+'?mode=ro',uri=True);db.row_factory=sqlite3.Row
+ provider=channels.selected(P)
+ ledger_path=(Path(cfg.get('ledger_file') or rh.default_private()/'tasks.sqlite') if provider=='rh' else channels.ledger_path(P,provider))
+ db=sqlite3.connect(ledger_path.as_uri()+'?mode=ro',uri=True);db.row_factory=sqlite3.Row
  row=db.execute('SELECT id,output,state FROM attempts WHERE project=? AND window=? AND output IS NOT NULL ORDER BY created DESC LIMIT 1',(str(P),wid)).fetchone();db.close()
  if not row or not Path(row['output']).is_file():return {'window':wid,'state':row['state'] if row else 'not-ready'}
  return inspect_file(wid,row['output'],row['id'],native_all,rois)

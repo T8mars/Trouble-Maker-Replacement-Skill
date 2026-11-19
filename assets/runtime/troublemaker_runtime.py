@@ -9,6 +9,7 @@ import subprocess
 import time
 import urllib.error
 import rh_core as rh
+import channels
 import source_config as source
 from apt_media_tools import resolve_tool
 
@@ -83,8 +84,11 @@ def edit_roles(entry):
 def input_digest(project, entry):
     project = Path(project).resolve()
     segment = original_segment(entry)
-    files = [entry['video_path'], entry['prompt_path'], entry['schema_path'],
+    files = [entry['video_path'], entry['prompt_path'],
              *entry['reference_paths'], f'补齐生成用/{segment}.txt']
+    native = channels.selected(project) == 'rh'
+    if native:
+        files.append(entry['schema_path'])
     files += [f'替换用参考图/{role}号.png' for role in source.CAST[segment]]
     original = list((project/'补齐生成用').glob(segment+' *.mp4'))
     if len(original) != 1:
@@ -95,7 +99,7 @@ def input_digest(project, entry):
         files += [entry['source_contract_path'], *contract.get('dependency_paths', [])]
     return rh.digest_object({'files': {name: rh.sha(rh.asset(project, name)) for name in sorted(set(files))},
         'contract': {k: v for k, v in entry.items() if k not in ('input_digest', 'semantic_review', 'retry_after')},
-        'cast': source.CAST[segment], 'application_config': source.app_config(),
+        'cast': source.CAST[segment], 'application_config': source.app_config() if native else entry['profile'],
         'appearance_policy':read(project/'runtime.json').get('appearance_policy',{}),
         'source_contract_sha256':rh.sha(project/'source-contract.json') if (project/'source-contract.json').is_file() else None})
 
@@ -124,14 +128,18 @@ def validate(project, entry, require_approval=True):
     expected = [f'替换用参考图/{role}号.png' for role in roles]
     if len(entry['reference_paths']) != len(expected):
         raise ValueError('Partial edge roles still require their reference slot')
-    if entry['profile']['kind'] != 'legacy-ai-app':
-        raise ValueError('This adapter only implements the verified RunningHub AI application')
-    if source.app_config()['模式'] != 'ai':
-        raise ValueError('CN endpoint requires a separately verified transport; do not silently use AI')
-    app = '2107845954833907713' if len(roles) == 2 else '2107844752011010050'
-    if entry['profile']['app_id'] != app:
-        raise ValueError('Application does not match role count')
-    rh.legacy_resolution_nodes(entry['profile'])
+    native = channels.selected(P) == 'rh'
+    if native:
+        if entry['profile']['kind'] != 'legacy-ai-app':
+            raise ValueError('This adapter only implements the verified RunningHub AI application')
+        if source.app_config()['模式'] != 'ai':
+            raise ValueError('CN endpoint requires a separately verified transport; do not silently use AI')
+        app = '2107845954833907713' if len(roles) == 2 else '2107844752011010050'
+        if entry['profile']['app_id'] != app:
+            raise ValueError('Application does not match role count')
+        rh.legacy_resolution_nodes(entry['profile'])
+    else:
+        channels.wire_frames(P, entry, roles)
     if not entry.get('pilot'):
         route = pilot_route(entry, cfg)
         passed = cfg.get('pilot_reviews', {}).get(route, {})
@@ -140,13 +148,14 @@ def validate(project, entry, require_approval=True):
         output = Path(passed.get('output', ''))
         if not output.is_file() or rh.sha(output) != passed.get('output_sha256'):
             raise ValueError('Pilot approval is not bound to its actual current output')
-    fields = {(str(x['nodeId']), x['fieldName']) for x in read(rh.asset(P, entry['schema_path']))['data']['nodeInfoList']}
-    required = {('137','image'), ('138','value'), ('321','video'), ('326','value')}
-    required |= {(n['nodeId'], n['fieldName']) for n in rh.legacy_resolution_nodes(entry['profile'])}
-    if len(roles) == 2:
-        required.add(('139','image'))
-    if not required <= fields:
-        raise ValueError('Public schema no longer supports required fields')
+    if native:
+        fields = {(str(x['nodeId']), x['fieldName']) for x in read(rh.asset(P, entry['schema_path']))['data']['nodeInfoList']}
+        required = {('137','image'), ('138','value'), ('321','video'), ('326','value')}
+        required |= {(n['nodeId'], n['fieldName']) for n in rh.legacy_resolution_nodes(entry['profile'])}
+        if len(roles) == 2:
+            required.add(('139','image'))
+        if not required <= fields:
+            raise ValueError('Public schema no longer supports required fields')
     for uploaded, full in zip(entry['reference_paths'], expected):
         if uploaded == full:
             continue
@@ -370,6 +379,10 @@ def main(argv=None):
             raise ValueError('Duplicate candidate ID')
         for entry in queue['jobs']:
             if args.command == 'prepare':
+                provider = channels.selected(P)
+                if provider != 'rh' and (not entry.get('profile') or entry['profile']['kind'] == 'legacy-ai-app'):
+                    entry['profile'] = channels.profile(provider)
+                    entry.pop('schema_path', None)
                 digest = input_digest(P, entry)
                 if entry.get('input_digest') != digest:
                     entry['input_digest'] = digest
@@ -383,8 +396,9 @@ def main(argv=None):
             'semantic_reviews_pending':sum(e.get('semantic_review',{}).get('status')!='passed' for e in queue['jobs'])}))
         return
     cfg = read(P/'runtime.json')
-    account = cfg.get('account_alias', 'default')
-    ledger = rh.Ledger(ledger_path())
+    provider = channels.selected(P)
+    account = channels.account_for(provider, cfg.get('account_alias', 'default'))
+    ledger = rh.Ledger(ledger_path() if provider == 'rh' else channels.ledger_path(P, provider))
     try:
         if ledger.account(account)['cap'] != 3:
             raise ValueError('Shared account concurrency must be exactly three')
@@ -396,7 +410,10 @@ def main(argv=None):
         with (P/'.dispatcher.lock').open('a+b') as lock:
             lock.seek(0); lock.write(b'0'); lock.flush(); lock.seek(0)
             msvcrt.locking(lock.fileno(), msvcrt.LK_NBLCK, 1)
-            runner = FreshAssetRunner(ledger, StrictTransport(key()), account)
+            if provider == 'rh':
+                runner = FreshAssetRunner(ledger, StrictTransport(key()), account)
+            else:
+                runner = channels.make_runner(P, ledger, account, StrictTransport._verify_download)
             loaded = []
             while True:
                 entries = read(P/'approved-queue.json')['jobs']

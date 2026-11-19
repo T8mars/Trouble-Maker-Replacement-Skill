@@ -16,9 +16,23 @@
 
 更多镜像陆续更新，可搜索 **t8star**。
 
-**基于 RunningHub（RH）AI 应用，需要 RH 账号、你自己的 API Key 和足够的 RH 币。** 生成任务会产生平台费用；本仓库不提供 API Key。
+## 选择生成渠道
 
-**Powered by RunningHub AI applications.** An RH account, your own API key and sufficient credits are required. Generation is billed by RunningHub; no credentials are included.
+每次收到新的一组参考图，先确认使用 RunningHub、贞贞 AI 还是晨羽。用户已指定时直接采用。恢复已有任务时沿用制作目录中的渠道和任务号。在新制作目录运行以下三条命令中的一条，选择渠道这一步不计费。
+
+```powershell
+python channels.py select --provider rh
+python channels.py select --provider zhenzhen --key-file "C:\MyPrivate\zhenzhen.key"
+python channels.py select --provider chenyu --key-file "C:\MyPrivate\chenyu.key"
+```
+
+两种新渠道各自使用所选平台的私有 Key；文件放在技能和制作目录之外。也可以省略 `--key-file`，使用 `ZZ_API_KEY_FILE` 或 `CHENYU_API_KEY_FILE` 指向私有文件。贞贞 AI 使用 `minimax-h3-comfyui-charswap`，把有序图片 URL 写入 `images`，运动视频和帧数放在 `metadata`。晨羽使用已发布的「Wuwu-视频角色替换」工作流，先校验版本，将图片分开上传并按当前镜头角色顺序绑定节点。
+
+每段保留原始动作帧。渠道需要补帧时，仅给 24 fps 提交副本追加末帧，最终仍按原帧表合片。提交中断时，已取得任务号的继续查询；晨羽可用 `python channels.py reconcile --attempt <本地尝试ID>` 恢复原订单。贞贞 AI 在平台核对该镜头的原任务号后，再添加 `--task-id <原任务号>`。
+
+**选择 RunningHub（RH）时需准备 RH 账号、私有 Key 和可用额度。** 贞贞 AI 和晨羽分别使用各自的账号计费。
+
+**The RunningHub route requires an RH account, a private key and available credits.** Zhenzhen and Chenyu use their own accounts and billing.
 
 注册 / Sign up：[海外站 International](https://www.runninghub.ai/?inviteCode=rh-v1121) · [国内站 Mainland China](https://www.runninghub.cn?inviteCode=kol01-rh099)。当前内置运行器使用海外 `runninghub.ai` 接口；国内站链接仅为注册入口，不代表已验证国内接口兼容性。The bundled adapter targets `runninghub.ai`; the mainland link is a registration option, not a claim of verified endpoint compatibility.
 
@@ -42,8 +56,8 @@ Thanks to wuwukasi for the original remake package, source organization, prompt 
 |---|---|
 | 技能英文名 | `troublemaker-character-replacement` |
 | 中文名称 | TroubleMaker全自动人物替换复刻 |
-| 当前版本 | 1.1.0 |
-| 需要提供 | 两张参考图、角色对应关系、画风要求、私有 RH Key |
+| 当前版本 | 1.2.0 |
+| 需要提供 | 两张参考图、角色对应关系、画风要求、所选渠道的私有 Key |
 | 一号 / 二号 | 一号对应原男主；二号对应原女主，支持互换 |
 | 素材结构 | 102段，101段需生成，仅028保持原片 |
 | 成片结构 | 4779帧、24fps，约199.125秒，1920×1078 |
@@ -52,7 +66,7 @@ Thanks to wuwukasi for the original remake package, source organization, prompt 
 
 ### 1. 安装完整技能
 
-从 [Releases](https://github.com/T8mars/Trouble-Maker-Replacement-Skill/releases/latest) 下载 **`troublemaker-character-replacement-v1.1.0.zip`**，解压得到 `troublemaker-character-replacement` 文件夹。
+从 [Releases](https://github.com/T8mars/Trouble-Maker-Replacement-Skill/releases/latest) 下载 **`troublemaker-character-replacement-v1.2.0.zip`**，解压得到 `troublemaker-character-replacement` 文件夹。
 
 把它交给 Agent 安装，或放进你使用的技能目录。Codex 通常为 `~/.codex/skills/`；配置了 `CODEX_HOME` 时为该目录下的 `skills/`。安装后重新打开技能列表或新建聊天，搜索中文名或英文名。
 
@@ -72,7 +86,7 @@ FFmpeg/FFprobe 需另行安装并加入 PATH，或在运行配置里指定路径
 - 图尽量清晰，脸、发型和服装特征完整；角色多视图也可使用。
 - 说明哪张对应原男主、哪张对应原女主。交换两张图即可制作角色对调版。
 - 说明画风，例如“平滑卡通，不要求像素风”。舞台耳麦默认保留，其他要求可直接说明。
-- 把 API Key 存在**技能目录和制作目录之外的本机私有文件**，只把路径给本地 Agent；也可通过 `RH_API_KEY_FILE` 或 `RH_API_KEY` 环境变量提供。不要写进 GitHub、Issue、README 或公开截图。
+- 把 API Key 存在**技能目录和制作目录之外的本机私有文件**，只把路径给本地 Agent；也RH 渠道可通过 `RH_API_KEY_FILE` 或 `RH_API_KEY` 环境变量提供。不要写进 GitHub、Issue、README 或公开截图。
 
 ### 3. 直接发送这段需求
 
@@ -103,11 +117,23 @@ Agent 会建立独立制作目录、识别当前人物、完成试片，再批�
 
 **队列满或网络掉线怎么办？** 让 Agent 继续读取当前项目记录并恢复已有任务，不要另开重复提交器，也不要删除任务账本。
 
-**成本固定吗？** 不固定，取决于 RH 应用计费、任务时长和修复次数。账号、余额与授权需在制作前确认；不承诺固定币数或零重试。
+**成本固定吗？** 不固定，取决于 所选渠道计费、任务时长和修复次数。账号、余额与授权需在制作前确认；不承诺固定币数或零重试。
 
 **API Key 或成片会上传到这个仓库吗？** 不会。公开范围只包括本技能与完整许可包内的原始素材；私人凭证、任务账本、个人参考图、候选、成片和任何大小写的 ROADMAP.md 都在发布排除范围内。
 
 ## English guide
+
+### Choose a generation provider
+
+For each new pair of references, specify **RunningHub**, **Zhenzhen AI** or **Chenyu**. In the new production directory run exactly one of the following commands before preparing the queue. Resume in the same directory with the original account.
+
+```powershell
+python channels.py select --provider rh
+python channels.py select --provider zhenzhen --key-file "C:\MyPrivate\zhenzhen.key"
+python channels.py select --provider chenyu --key-file "C:\MyPrivate\chenyu.key"
+```
+
+Use your selected provider’s private key file, stored outside the skill and production folders. Zhenzhen uses the MiniMax H3 charswap model with ordered image URLs. Chenyu uploads a separate asset per role and binds each one to a workflow slot. Short clips receive a temporary final-frame hold when required. The final cut uses the original shot timing and soundtrack. Confirm the role mapping with a pilot before batching.
 
 ### Service links and offers
 
@@ -132,7 +158,7 @@ Provide two character reference images to an agent. The skill replaces the two l
 This is a reusable **agent workflow for this specific source video**, not a general importer for arbitrary videos or a standalone face-swap application. Your agent must support SKILL.md, local files, Python and media tools. Visual review remains necessary.
 
 - Skill ID: `troublemaker-character-replacement`.
-- Version: **1.1.0**.
+- Version: **1.2.0**.
 - Role one replaces the source male lead; role two replaces the source female lead. Their reference identities can be swapped.
 - Structure: **102 segments, 101 generation segments and one original passthrough (028)**.
 - Final timeline: **4,779 frames at 24fps**, approximately **199.125 seconds**, **1920×1078**.
@@ -141,10 +167,10 @@ This is a reusable **agent workflow for this specific source video**, not a gene
 
 ### Quick start
 
-1. Download **`troublemaker-character-replacement-v1.1.0.zip`** from [Releases](https://github.com/T8mars/Trouble-Maker-Replacement-Skill/releases/latest). Extract the `troublemaker-character-replacement` folder and ask your agent to install it. For Codex, the usual location is `~/.codex/skills/`, or `skills/` under your configured `CODEX_HOME`.
+1. Download **`troublemaker-character-replacement-v1.2.0.zip`** from [Releases](https://github.com/T8mars/Trouble-Maker-Replacement-Skill/releases/latest). Extract the `troublemaker-character-replacement` folder and ask your agent to install it. For Codex, the usual location is `~/.codex/skills/`, or `skills/` under your configured `CODEX_HOME`.
 2. Install Python dependencies with `python -m pip install -r requirements.txt`. Install FFmpeg and FFprobe separately, expose them on PATH or configure their paths. Run `python -B scripts/troublemaker_project.py check` inside the installed skill folder.
 3. Provide two reference images, the desired role mapping and visual style. Stage headsets are preserved by default.
-4. Keep your RH key in a private local file **outside the skill and project directories**. Pass its path to your local agent or configure `RH_API_KEY_FILE`; `RH_API_KEY` is also supported. Never publish the key in issues or repository files.
+4. For the RH route, keep your RH key in a private local file **outside the skill and project directories**. Pass its path to your local agent or configure `RH_API_KEY_FILE`; `RH_API_KEY` is also supported. Never publish the key in issues or repository files.
 5. Send the request below. The agent prepares a separate project, reviews pilot outputs, generates and repairs segments, checks the motion and assembles the film.
 
 ```text
@@ -167,7 +193,7 @@ Shot boundaries and action phases are preserved rather than forcing five-second 
 
 When only difficult segments remain, the agent prepares distinct repair hypotheses to use the available three slots. There is no fixed three-attempt limit for visual repairs; repeated failures require a changed approach. Encoding failures are handled locally. A verified complete silent video can be remuxed again without generating the video again.
 
-New identities still need pilot and normal-speed review. Cost varies with RH pricing, generation duration and repairs; neither fixed cost nor zero retries is promised. Private credentials, ledgers, personal references, generated candidates, finished videos and ROADMAP.md are excluded from publication.
+New identities still need pilot and normal-speed review. Cost varies with provider pricing, generation duration and repairs; neither fixed cost nor zero retries is promised. Private credentials, ledgers, personal references, generated candidates, finished videos and ROADMAP.md are excluded from publication.
 
 ## 开发与验证 / Development and verification
 

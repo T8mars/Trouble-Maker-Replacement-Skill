@@ -1,5 +1,9 @@
 # 运行协议与最小数据结构
 
+## 新渠道队列
+
+先在新制作目录运行 README 中的 `channels.py select`。使用贞贞 AI 或晨羽时，队列保留原 `window_id`、`video_path`、`prompt_path`、角色顺序、实测 `generation_frames` 与 `generation_fps`。首次 `prepare` 自动写入所选渠道的 `profile`，无需提供 RH 的 `schema_path`。照常完成身份及动作复核，再执行 `check` 和 `run`。输入摘要绑定渠道与素材；已付费任务按原 ID 查询。每个新渠道各有一个本机共享台账，每个账户最多三项在途。下文的 RH 应用号与节点表仅供选择 RH 时使用。
+
 ## 初始化后
 
 在新的运行目录使用脚本。Python需要av、Pillow；配置本机FFmpeg/FFprobe，或用源包工具。`runtime.json` 的 `ffmpeg_path` 控制解码，`encoder_path` 独立选择合片编码器；环境变量为TROUBLEMAKER_FFMPEG、TROUBLEMAKER_FFPROBE、TROUBLEMAKER_ENCODER，不借APT环境设置。配置路径有误直接报错，不能悄悄回退。

@@ -1,4 +1,6 @@
 {
+  "generation_providers": ["rh", "zhenzhen", "chenyu"],
+  "ordered_provider_references": true,
   "chinese_name_registered": true,
   "template_integrity_verified": true,
   "source_media_verified": true,

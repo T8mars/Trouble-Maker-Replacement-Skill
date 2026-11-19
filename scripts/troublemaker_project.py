@@ -164,7 +164,7 @@ def initialize(args: argparse.Namespace) -> dict:
     for role, ref in zip(["一号", "二号"], refs):
         shutil.copy2(ref, target / "替换用参考图" / f"{role}.png")
     reference_hashes = {role: sha256(ref) for role, ref in zip(["一号", "二号"], refs)}
-    dump(target / "meta.json", {"skill": "troublemaker-character-replacement", "skill_version":"1.1.0", "status": "initialized",
+    dump(target / "meta.json", {"skill": "troublemaker-character-replacement", "skill_version":"1.2.0", "status": "initialized",
          "project": str(target), "reference_sha256": reference_hashes,
          "original_frames": 4779, "fps": "24/1", "audio_start_seconds": 0,
          "generated_segments":101,"passthrough":["028"]})

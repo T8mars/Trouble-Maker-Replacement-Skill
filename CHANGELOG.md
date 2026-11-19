@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.0
+
+新增贞贞 AI 和晨羽工作流、有序多图上传、短镜头帧数适配与订单恢复。 / Added Zhenzhen AI and Chenyu, ordered reference slots, short-clip adaptation and order recovery.
+
 ## 1.1.0
 
 - Complete, reusable TroubleMaker skill with a Chinese display name and bilingual usage guide.

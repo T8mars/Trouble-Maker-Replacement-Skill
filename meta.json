@@ -1,7 +1,7 @@
 {
   "name": "troublemaker-character-replacement",
   "display_name": "TroubleMaker全自动人物替换复刻",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "original_author": "wuwukasi",
   "original_author_url": "https://space.bilibili.com/670281046",
   "packaged_for": "T8star",
@@ -14,6 +14,7 @@
   "original_frames": 4779,
   "padded_frames": 5569,
   "fps": "24/1",
+  "generation_providers": ["rh", "zhenzhen", "chenyu"],
   "default_concurrency": 3,
   "api_key_bundled": false,
   "source_notes": "Original source media and license retained by SHA256; credential placeholder, local executables and personal run records excluded.",

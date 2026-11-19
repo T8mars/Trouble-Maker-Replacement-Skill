@@ -5,7 +5,13 @@ description: TroubleMaker全自动人物替换复刻：以两张人物图替换�
 
 # TroubleMaker全自动人物替换复刻
 
-版本1.1.0。原作者 [wuwukasi](https://space.bilibili.com/670281046)，优化作者 [T8star](https://space.bilibili.com/385085361)。保留LICENSE、来源与成片署名。调用RunningHub应用，需要用户账号与显式提供的私有凭证；不附带Key。
+版本1.2.0。原作者 [wuwukasi](https://space.bilibili.com/670281046)，优化作者 [T8star](https://space.bilibili.com/385085361)。保留LICENSE、来源与成片署名。用所选渠道的账号与私有凭证制作。
+
+## 本轮渠道与恢复
+
+每次收到新的参考图，询问用 RunningHub、贞贞 AI 还是晨羽；已明确则直接执行。新工作副本先运行 `python channels.py select --provider rh|zhenzhen|chenyu`（三选一）。新渠道可加 `--key-file` 指向副本和技能目录外的私有文件。继续已有任务时读取 `channel.json`，历史无标记项目沿用 RH。在既有制作流程中使用下文的调度和审片入口。
+
+按每个镜头的实际角色分别上传参考图，单人镜头即使只有二号也使用第一个槽。贞贞 AI 使用 `images`、`metadata.video_url` 和整数 `metadata.frames`。晨羽先核对工作流版本，再按顺序绑定图片并保存原订单的幂等键。按镜头切分，完整提交副本最长 10 秒。需要适配帧数时保留动作帧，只在尾部补静帧，成片仍按原帧表验收。断线先查已有任务；渠道、人物或计费账户变化时新建制作目录。完整命令和恢复方法见 README。
 
 ## 先恢复上下文
 

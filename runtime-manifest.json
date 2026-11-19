@@ -1,17 +1,21 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "files": {
     "apt_media_tools.py": "23e4aa6e6899a384b3cb924b6e79a040d74ee1fa8e16b1cef6a6275364b491a5",
     "assemble_verified.py": "4317cac25669f89b17bed42a65e5a14468d547a03a8a066396c064c4ffa6216e",
+    "channels.py": "8299feaaaed65bd5ef4a09ed37756a921f733ae274811779376c0afff4f73b79",
+    "chenyu_runner.py": "4d6f4f691904bbe41a671887c5544009ad377106661575d0504a4ecf798a1b91",
     "compare_actions.py": "7e58d75951e40e6c1619b8a21e1b92a5832bf7d9d89648f7f077a33a801b2b9d",
     "dependencies.json": "f4980a1e6b1f56c371e352e248d921c2252fa909fea9f69caede8ed0550702bb",
-    "inspect_compact.py": "6bdd567987f22f492462ffafcf845ba4b2bf875ab40ce0fdcb525186b257a3a2",
+    "inspect_compact.py": "8261992bbde06fea7ec601112a3cc9ab607cec8c1ea71372e1b5081376a81ddc",
     "review_contract.py": "0224af573a89b297aa83e3cee40c5bd3a878cbcbe964806d19ec847231095500",
-    "rh_core.py": "23eac9469363452e59bb59c5755b3a498892e05b7dc84dbf2f81f87b5c035840",
+    "rh_core.py": "6cd89280624d9e705c0a25af84e1134ece4eab002edc7d50e82fe7e3f97106ed",
     "source_config.py": "f6629c7f8b8f06e9f60e850d1f22827f1c484091e22fa0e81d8f7fb20c55b84c",
     "stream_review.py": "db3b4e878a6196c20748d15877b2b180317e32718a509f8947c1a331f93bc7b1",
     "strict_video_frames.py": "b197d036de3e5ec815be0e472614ade165b524a940deef296060ebabcb6cf637",
-    "troublemaker_runtime.py": "7685b49c1314248e915fa5b2a4109d1d05d986f43d64a50367c08089096fee34",
-    "validate_prompts.py": "de6a319f758d754d6deb4a83401c5982d3663552c2634c7b6a21e80e8476421c"
+    "troublemaker_runtime.py": "dbb620f48abe34c051c07f94c1eca3e53d64a39776562b492a5adfb9e7087dbe",
+    "validate_prompts.py": "de6a319f758d754d6deb4a83401c5982d3663552c2634c7b6a21e80e8476421c",
+    "verify_channels.py": "8b7e4254e3625d2fd69d39f72095a0df3e53eb337ab3acf6e137d2777e4d5f76",
+    "zhenzhen_runner.py": "ee1722f211016fac09488c754e73fdce0a47d6400ef28de7c5a0316da6c908ae"
   }
 }
